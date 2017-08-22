@@ -18,6 +18,7 @@ defmodule Identicon do
     |> Enum.chunk(3)
     |> Enum.map(&mirror_row/1)
     |> List.flatten
+    |> Enum.with_index
   end
 
   defp mirror_row(row) do
